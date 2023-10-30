@@ -1,0 +1,25 @@
+-- Criação da tabela socio_torcedor
+CREATE TABLE socio_torcedor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(70) NOT NULL,
+    dtnascimento DATE,
+    email VARCHAR(256) NOT NULL,
+    celular BIGINT(11),
+    telefone BIGINT(10),
+    endereco VARCHAR(256),
+    cep DECIMAL(5,3),
+    uf CHAR(2),
+    senha VARCHAR(200),
+    idbeneficio INT
+);
+
+-- Inserção de dados na tabela socio_torcedor
+INSERT INTO socio_torcedor(nome, dtnascimento, email, celular, telefone, endereco, cep, uf, idbeneficio, senha)
+VALUES('Raphael Paiva', '2004-12-02', 'raphaelpaivaj@gmail.com', 1, 1, 'rua balthazar fidelis', 1.000, 'SP', 1, 'a');
+insert into socio_torcedor(nome, dtnascimento, email, celular, telefone, endereco, cep, uf, idbeneficio, senha)
+values('Gabriel Dorci', '2003-10-19', 'gbl_81@hotmail.com', 2, 2, 'caruto saraiva', 2, 'SP', 2, 'b');
+insert into socio_torcedor(nome, dtnascimento, email, celular, telefone, endereco, cep, uf, idbeneficio, senha)
+values('Rafael Santana', '2007-4-2', 'rafasantana@gmail.com', 3, 3, 'Avenida do Sol, 456, Bairro Sereno, Cidade Tranquila', 3, 'SP', 3, 'c');
+
+-- Consultas
+SELECT * FROM socio_torcedor ORDER BY nome ASC;
